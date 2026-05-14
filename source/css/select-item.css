@@ -1,0 +1,377 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100vw;
+            height: auto;
+            overflow-x: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+            background: #F2F3F5;
+            color: #0F131A;
+        }
+        .page {
+            position: relative;
+            width: 100vw;
+            height: auto;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .gradient-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 68.533vw;
+            background: linear-gradient(180deg, #FFE033 0%, #FFE033 49.31%, rgba(255, 224, 51, 0.0001) 100%);
+            z-index: 0;
+        }
+        .frame9 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.4vw;
+            z-index: 1;
+        }
+        .status-bar {
+            width: 100%;
+            height: 11.733vw;
+            box-sizing: border-box;
+            padding: 2.667vw 5.333vw 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .status-bar__time {
+            font-family: 'SF Pro', sans-serif;
+            font-weight: 590;
+            font-size: 4.267vw;
+            color: #000;
+        }
+        .status-bar__levels {
+            width: 35.867vw;
+            height: 13.867vw;
+            margin-top: -4vw;
+            margin-right: -9.333vw;
+        }
+        .header-bar {
+            width: 100vw;
+            height: 11.733vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3.2vw;
+            flex-shrink: 0;
+        }
+        .back-btn {
+            width: 6.4vw;
+            height: 6.4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .header-title {
+            font-size: 4.8vw;
+            font-weight: 600;
+            color: #0F131A;
+            text-align: center;
+            flex: 1;
+        }
+        .header-placeholder {
+            width: 6.4vw;
+            height: 6.4vw;
+            flex-shrink: 0;
+        }
+        .frame8 {
+            width: 95.2vw;
+            display: flex;
+            flex-direction: column;
+            gap: 2.4vw;
+        }
+        .ticket-card {
+            width: 95.2vw;
+            height: 24.8vw;
+            background: #FFFFFF;
+            border-radius: 1.6vw;
+            padding: 3.2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .ticket-title {
+            font-size: 4vw;
+            font-weight: 600;
+            color: #0F131A;
+            line-height: 1.4;
+        }
+        
+        .divider {
+            width: 100%;
+            height: 1px;
+            border-top: 1px dashed #D2D4D9;
+        }
+        .sku-selector {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sku-info {
+            font-size: 3.2vw;
+            font-weight: 400;
+            color: #0F131A;
+        }
+        .sku-more {
+            display: flex;
+            align-items: center;
+            gap: 0.533vw;
+        }
+        .sku-more-text {
+            font-size: 3.2vw;
+            color: #0F131A;
+        }
+        .merchant-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            width: 95.2vw;
+            height: 32.267vw;
+        }
+        .merchant-tag-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 1.333vw;
+            width: 95.2vw;
+            min-height: 1.6vw;
+            height: auto;
+            background: #FFFFFF;
+            border-radius: 1.6vw 1.6vw 0 0;
+        }
+        .tag-low-price {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.533vw 0.8vw;
+            gap: 0.8vw;
+            width: 12.267vw;
+            height: 3.733vw;
+            background: #FF5533;
+            border-radius: 1.6vw 0px;
+            font-size: 2.667vw;
+            line-height: 2.667vw;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+         .tag-hot-price {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.533vw 0.8vw;
+            gap: 0.8vw;
+            width: 12.267vw;
+            height: 3.733vw;
+            background: #FF8C1A;
+            border-radius: 1.6vw 0px;
+            font-size: 2.667vw;
+            line-height: 2.667vw;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+        .merchant-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0.8vw 3.2vw;
+            width: 95.2vw;
+            height: 28.533vw;
+            background: #FFFFFF;
+            border-radius: 0 0 1.6vw 1.6vw;
+        }
+        .merchant-card-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 0;
+            width: 88.8vw;
+            height: 23.733vw;
+            border-radius: 1.6vw;
+        }
+        .merchant-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+        }
+        .merchant-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .merchant-title {
+            font-size: 4vw;
+            line-height: 5.6vw;
+            font-weight: 500;
+            color: #0F131A;
+            height: 5.6vw;
+        }
+        .brand-mind {
+            display: none;
+        }
+        .tags-row {
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 2.4vw 0 0;
+            gap: 0.8vw;
+            width: fit-content;
+        }
+        .tag-item {
+            border: 1px solid rgba(92, 95, 102, 0.5);
+            border-radius: 0.533vw;
+            padding: 0.267vw 0.8vw;
+            width: fit-content;
+            white-space: nowrap;
+            height: 3.733vw;
+            font-size: 2.667vw;
+            line-height: 2.667vw;
+            color: #5C5F66;
+        }
+        .shop-info {
+            display: flex;
+            padding: 2.4vw 0 0;
+            gap: 0.8vw;
+        }
+        .shop-name {
+            font-size: 3.2vw;
+            line-height: 3.733vw;
+            color: #5C5F66;
+        }
+        .sales-info {
+            display: flex;
+            padding: 2.133vw 0 0;
+            gap: 4vw;
+            align-items: center;
+        }
+        .sales-text {
+            font-size: 3.2vw;
+            line-height: 3.2vw;
+            color: #5C5F66;
+        }
+        .sales-more {
+            display: flex;
+            align-items: center;
+            gap: 0.533vw;
+            font-size: 3.2vw;
+            line-height: 3.2vw;
+            color: #5C5F66;
+        }
+        .merchant-right {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.467vw;
+            width: 36vw;
+            flex-shrink: 0;
+            height: 11.2vw;
+        }
+        .price-area {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 0.8vw;
+            width: 34.4vw;
+            height: 10.133vw;
+        }
+        .price-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 0.533vw;
+        }
+        .price-qi {
+            font-size: 3.2vw;
+            line-height: 4.267vw;
+            color: #919499;
+        }
+        .price-symbol {
+            font-family: 'Alibaba Sans 102', sans-serif;
+            font-weight: 700;
+            font-size: 3.2vw;
+            line-height: 4vw;
+            color: #FF5533;
+        }
+        .price-num {
+            font-family: 'Alibaba Sans 102', sans-serif;
+            font-weight: 700;
+            font-size: 5.6vw;
+            line-height: 5.6vw;
+            color: #FF5533;
+        }
+        .discount-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0.267vw 0.8vw;
+            gap: 0.8vw;
+            width: 34.4vw;
+            height: 3.733vw;
+            background: linear-gradient(90deg, rgba(255,255,255,0.0001) 0%, #FFE6E0 100%);
+            border-radius: 0.533vw;
+        }
+        .discount-text {
+            font-size: 2.667vw;
+            font-style: italic;
+            font-weight: 500;
+            color: #FF5533;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .discount-divider {
+            width: 1px;
+            height: 3.2vw;
+            border-left: 1px dashed #FFB2A3;
+        }
+        .discount-more {
+            font-size: 2.667vw;
+            color: #FF5533;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .discount-arrow {
+            width: 0.933vw;
+            height: 1.733vw;
+            display: flex;
+            align-items: center;
+        }
+        .book-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3.2vw;
+            width: 11.2vw;
+            height: 11.2vw;
+            background: #FF7300;
+            border-radius: 1.6vw;
+            font-size: 4.8vw;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
