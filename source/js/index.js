@@ -3,7 +3,7 @@
         const videoContainer = document.getElementById('video-container');
         const video = document.getElementById('fullscreen-video');
         const playButton = document.getElementById('play-btn');
-        const VIDEO_CONFIG = { folder: 'source/videos/', files: ['SPU_item.MP4'] };
+        const VIDEO_CONFIG = { folder: 'source/videos/', files: ['SPU_item.mp4'] };
         if (VIDEO_CONFIG.files.length > 0) { video.src = VIDEO_CONFIG.folder + VIDEO_CONFIG.files[0]; }
         videoContainer.addEventListener('click', () => { if (!video.paused) { video.pause(); playButton.classList.remove('is-hidden'); } });
         playButton.addEventListener('click', (event) => { event.stopPropagation(); video.play(); playButton.classList.add('is-hidden'); });
