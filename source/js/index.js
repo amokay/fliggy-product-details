@@ -3,8 +3,21 @@
         const videoContainer = document.getElementById('video-container');
         const video = document.getElementById('fullscreen-video');
         const playButton = document.getElementById('play-btn');
+        const videoLoading = document.getElementById('videoLoading');
         const VIDEO_CONFIG = { folder: 'source/videos/', files: ['SPU_item.mp4'] };
         if (VIDEO_CONFIG.files.length > 0) { video.src = VIDEO_CONFIG.folder + VIDEO_CONFIG.files[0]; }
+
+        // ====== 主视频 Loading 控制 ======
+        const showVideoLoading = () => { if (videoLoading) videoLoading.classList.remove('is-hidden'); };
+        const hideVideoLoading = () => { if (videoLoading) videoLoading.classList.add('is-hidden'); };
+        // 视频可以播放时隐藏 loading
+        video.addEventListener('canplay', hideVideoLoading);
+        video.addEventListener('playing', hideVideoLoading);
+        // 视频等待缓冲时显示 loading
+        video.addEventListener('waiting', showVideoLoading);
+        // 视频源切换时显示 loading
+        video.addEventListener('loadstart', showVideoLoading);
+
         videoContainer.addEventListener('click', () => { if (!video.paused) { video.pause(); playButton.classList.remove('is-hidden'); } });
         playButton.addEventListener('click', (event) => { event.stopPropagation(); video.play(); playButton.classList.add('is-hidden'); });
 
@@ -20,6 +33,17 @@
             'base-3': 'source/videos/哈努曼世界_天桥漫步.mov',
             'base-4': 'source/videos/skyline_飞行滑板.mov'
         };
+
+        // ====== 地图弹窗视频 Loading 控制 ======
+        const popupVideoLoading = document.getElementById('popupVideoLoading');
+        const showPopupLoading = () => { if (popupVideoLoading) popupVideoLoading.classList.remove('is-hidden'); };
+        const hidePopupLoading = () => { if (popupVideoLoading) popupVideoLoading.classList.add('is-hidden'); };
+        if (mapPopupVideo) {
+            mapPopupVideo.addEventListener('canplay', hidePopupLoading);
+            mapPopupVideo.addEventListener('playing', hidePopupLoading);
+            mapPopupVideo.addEventListener('waiting', showPopupLoading);
+            mapPopupVideo.addEventListener('loadstart', showPopupLoading);
+        }
         // 基地ID→基地名称映射，用于拼接视频文件名
         const baseNameMap = {
             'base-1': '哈努曼世界',
