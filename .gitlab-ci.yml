@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp -r *.html source/ public/
+    - cp -r 1.商详顶部 2.视频框架 3.基础信息 4.底部ai面板 UI切图资源 public/ 2>/dev/null || true
+    - cp -r node_modules public/ 2>/dev/null || true
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
