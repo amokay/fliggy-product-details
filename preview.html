@@ -60,11 +60,39 @@
         }
 
         .screen {
+            position: relative;
             width: 100%;
             height: 100%;
             border-radius: 68px;
             overflow: hidden;
             background: #000;
+        }
+
+        /* 灵动岛 */
+        .dynamic-island {
+            position: absolute;
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 50px;
+            background: #000;
+            border-radius: 33px;
+            z-index: 100;
+            box-shadow: 0 0 0 3px #000;
+        }
+
+        /* Home 指示条 */
+        .home-indicator {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 268px;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            z-index: 100;
         }
 
         .screen iframe {
@@ -87,6 +115,8 @@
 <body>
     <div class="phone" id="phone">
         <div class="screen">
+            <div class="dynamic-island"></div>
+            <div class="home-indicator"></div>
             <iframe src="index.html" allow="autoplay; fullscreen"></iframe>
         </div>
     </div>
