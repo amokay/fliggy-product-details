@@ -60,11 +60,37 @@
         }
 
         .screen {
+            position: relative;
             width: 100%;
             height: 100%;
             border-radius: 68px;
             overflow: hidden;
             background: #000;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 66px;
+            background: #000;
+            border-radius: 33px;
+            z-index: 100;
+            box-shadow: 0 0 0 3px #000;
+        }
+
+        .home-indicator {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            z-index: 100;
         }
 
         .screen iframe {
@@ -87,7 +113,9 @@
 <body>
     <div class="phone" id="phone">
         <div class="screen">
+            <div class="dynamic-island"></div>
             <iframe src="index.html" allow="autoplay; fullscreen"></iframe>
+            <div class="home-indicator"></div>
         </div>
     </div>
     <div class="label">Fliggy Design</div>
